@@ -9,6 +9,11 @@ mongoose.connect(Database).then(con => {
     console.log('connected to database...',con);
 }).catch(err => console.log('error in connecting database...', err))
 
+app.get('/', (req,res,_next)=>{
+
+    res.send('Welcome');
+});
+
 app.get('/user', async (req,res,_next)=>{
 
     try {
